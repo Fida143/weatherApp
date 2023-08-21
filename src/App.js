@@ -24,6 +24,7 @@ import { useEffect, useState } from "react";
 // }
 
 function App() {
+ 
 
   const [resp,setResp] = useState(null); 
   const [curCity,setCurCity]= useState("boston");
@@ -32,14 +33,15 @@ function App() {
   let city = curCity;
 
   async function fetchApi() {
+     // fetch Api  and take response
     // let resp = null;
     const options = {
       method: "GET",
-      url: "https://weatherapi-com.p.rapidapi.com/current.json",
+      url: "API url",
       params: { q: `${city}` },
       headers: {
-        "X-RapidAPI-Key": "8d493d71f0msh32a691079eb2435p13c483jsn3c9ad4e873e3",
-        "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+        "x-apiName-Key": "past api key",
+        "x-apiName-Host": "past api host",
       },
     };
 
